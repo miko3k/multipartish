@@ -1,7 +1,7 @@
 {
   "name": "multipartish",
-  "version": "0.1.0",
-  "description": "Dead simple way of producing multipart/* data",
+  "version": "0.1.1",
+  "description": "Dead simple way of producing multipart/* messages",
   "main": "lib/index.js",
   "scripts": {
     "test": "./node_modules/.bin/tape ./test/*.js"

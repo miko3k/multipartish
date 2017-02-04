@@ -35,3 +35,9 @@ test('tests', function (t) {
     t.equal(m.get(), "--S\r\n\r\nfoo\r\n--S\r\na: b\r\n\r\nbar\r\n--S--\r\n");
 });
 
+test('fluentapi', function(t) {
+    var m = new multi();
+    t.plan(2)
+    t.equal(m, m.part("a"))
+    t.equal(m, m.header("a"))
+});

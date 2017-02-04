@@ -10,6 +10,14 @@ npm install multipartish --save
 
 ## Example
 
+Hello world
+
+```javascript
+var MultiPartish = require('multipartish')
+
+console.log(new MultiPartish().header("Content-Type", "text/plain").part("hello world").get())
+```
+
 This example shows how to [upload file to Google drive](https://developers.google.com/drive/v3/web/manage-uploads#multipart)
 
 ```javascript
@@ -37,6 +45,7 @@ gapi.client.request({
 })
 ```
 
+
 ## Usage
 
 ### Constructor
@@ -57,11 +66,11 @@ Examples:
 
 #### get()
 
-Returns the complete multipart message. Most important method!
+Returns the complete multipart message. Most important method! Returns `this`.
 
 #### part(body)
 
-Adds a part. Second most important method!
+Adds a part. Second most important method! Returns `this`.
 
 #### header(value)
 
@@ -97,3 +106,4 @@ you should use the contructor argument instead.
 ## Version history
 
 0.1.0 - initial release
+0.1.1 - fluent api support
