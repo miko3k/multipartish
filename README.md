@@ -1,6 +1,8 @@
 # multipartish
 
-Dead simple way of producing `multipart/*` data. Works in browser, node, or anywhere else (hopefully), because it's super simple.
+Dead simple way of producing `multipart/*` messages. Works in browser, node, or anywhere else (hopefully) thanks to its simplicity.
+
+Its suitable for small messages (say, up to few kB), larger would benefit greatly from stream based approach.
 
 ## Installation
 
@@ -24,7 +26,7 @@ This example shows how to [upload file to Google drive](https://developers.googl
 // prepare data
 var MultiPartish = require('multipartish')
 var name = "My File"
-var body = "text\n"
+var body = "Hello world!\n"
 
 var m = new MultiPartish()
 m.header("Content-Type", "application/json; charset=UTF-8")
@@ -50,9 +52,9 @@ gapi.client.request({
 
 ### Constructor
 
-Constructor accepts a single object as parameter, encapsulating the optional arguments. Only one key is currently defined:
+Constructor accepts a single object as the parameter, encapsulating the optional arguments. Only one key is currently defined:
 
-* `boundary`: set boundary value, use is discouraged, but it makes writing unit tests possible
+* `boundary`: sets the boundary
 
 Examples:
 ```javascript
@@ -66,19 +68,19 @@ Examples:
 
 #### get()
 
-Returns the complete multipart message. Most important method! Returns `this`.
+Returns the complete multipart message.
 
 #### part(body)
 
-Adds a part. Second most important method! Returns `this`.
+Adds a part and returns `this`.
 
 #### header(value)
 
-Specifies a header for following part, for example `.header("Content-Type: text/plain")`
+Specifies a header for following part, for example `.header("Content-Type: text/plain")`. Returns `this`.
 
 #### header(name, value)
 
-Specifies a header for following part, for example `.header('Content-Type', 'text/plain')`
+Specifies a header for following part, for example `.header('Content-Type', 'text/plain')`. Returns `this`.
 
 Equavalent to:
 
@@ -106,4 +108,7 @@ you should use the contructor argument instead.
 ## Version history
 
 0.1.0 - initial release
+
 0.1.1 - fluent api support
+
+0.1.2 - README.md fixes, **not yet published to npm**
