@@ -1,0 +1,29 @@
+{
+  "name": "multipartish",
+  "version": "0.1.0",
+  "description": "Dead simple way of producing multipart/* data",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/tape ./test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miko3k/multipartish.git"
+  },
+  "keywords": [
+    "multipart",
+    "multipart/mixed",
+    "browser",
+    "http",
+    "request"
+  ],
+  "author": "Peter Hanula",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/miko3k/multipartish/issues"
+  },
+  "homepage": "https://github.com/miko3k/multipartish#readme",
+  "devDependencies": {
+    "tape": "^4.6.3"
+  }
+}
